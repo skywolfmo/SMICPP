@@ -431,7 +431,9 @@ References are often confused with pointers but three major differences between 
 
 ---
 <!-- 
-+ right, return new value
++ right, return new value in a new memory case
+= left first, needs a reference/poitur at the left position, then proceed to look for a value or ref at the right it stops looking when it finds a ;
+
 -->
 
 ```cpp
