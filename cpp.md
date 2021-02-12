@@ -330,6 +330,8 @@ This keyword is used to access variable in a file which is declared & defined in
 
 In this we pass the address of the variable as arguments. In this case the formal parameter can be taken as a reference or a pointer, in both the case they will change the values of the original variable.
 
+---
+
 ```cpp
         void calc(int *p);
 
@@ -351,6 +353,8 @@ In this we pass the address of the variable as arguments. In this case the forma
 ### Call by Value
 
 In this calling technique we pass the values of arguments which are stored or copied into the formal parameters of functions. Hence, the original values are unchanged only the parameters inside function changes.
+
+---
 
 ```cpp
         void calc(int x);
