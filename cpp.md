@@ -374,19 +374,17 @@ In this calling technique we pass the values of arguments which are stored or co
 
 In this calling technique we pass the reference of the arguments which apply all the changes to the passed value, any change applied will affect the original value of the argument.
 
+---
+
 ```cpp
         void calc(int &x);
-
-        int main()
-        {
+        int main(){
             int x = 10;
             calc(x);
             printf("%d", x);
         // Will print 20;
         }
-
-        void calc(int &x)
-        {
+        void calc(int &x){
             x = x + 10 ;
         }
 ```
