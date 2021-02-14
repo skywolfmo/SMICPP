@@ -131,6 +131,7 @@ Local variables are the variables which exist only between the curly braces, in 
 
 ### Special types of variable
 
+```cpp
     #include <iostream.h>
     using namespace std;
     int main()
@@ -138,6 +139,7 @@ Local variables are the variables which exist only between the curly braces, in 
         final int i=10;
         static int y=20;
     }
+```
 
 ---
 
@@ -678,12 +680,12 @@ Check inheritance
 
 ### Visibility
 
-|   |   |   |   |   |
-|---|---|---|---|---|
-| Base class  |   |   |   |   |
-| Private  |   |   |   |   |
-|  Protected |   |   |   |   |
-|  Public |   |   |   |   |
+|   | Derived Class_2  |  Derived Class_1  | Derived Class  |
+|---|---|---|---|
+| Base Class | Public Mode (public Class_2: public Class) | Private Mode (public Class_1: private Class)  | Protected Mode (public Class_2: protected Class) |
+| Private  | Not Inherited   | Not Inherited   | Not Inherited   |
+|  Protected |  Protected  | Private   |  Protected |
+|  Public |  Public | Private  |  Protected |
 
 <!-- [Table showing all the Visibility Modes](https://www.notion.so/a926b086c93f4c2b8fb5796e5fa7abee) -->
 
@@ -709,7 +711,6 @@ In private mode, the protected and public members of super class become private 
 
 ---
 
-
 #### Protected Inheritance
 
 In protected mode, the public and protected members of Super class becomes protected members of Sub class.
@@ -728,7 +729,7 @@ In protected mode, the public and protected members of Super class becomes prote
 
 In this type of inheritance one derived class inherits from only one base class. It is the most simplest form of Inheritance.
 
-![https://www.studytonight.com/cpp/images/single-inheritance.jpg](https://www.studytonight.com/cpp/images/single-inheritance.jpg)
+![width:500](https://www.studytonight.com/cpp/images/single-inheritance.jpg)
 
 ---
 
@@ -738,7 +739,7 @@ In this type of inheritance one derived class inherits from only one base class.
 
 In this type of inheritance a single derived class may inherit from two or more than two base classes.
 
-![https://www.studytonight.com/cpp/images/multiple-inheritance.jpg](https://www.studytonight.com/cpp/images/multiple-inheritance.jpg)
+![width:500](https://www.studytonight.com/cpp/images/multiple-inheritance.jpg)
 
 ---
 
@@ -746,7 +747,7 @@ In this type of inheritance a single derived class may inherit from two or more 
 
 In this type of inheritance, multiple derived classes inherits from a single base class.
 
-![https://www.studytonight.com/cpp/images/hierarchical-inheritance.jpg](https://www.studytonight.com/cpp/images/hierarchical-inheritance.jpg)
+![width:500](https://www.studytonight.com/cpp/images/hierarchical-inheritance.jpg)
 
 ---
 
@@ -754,7 +755,7 @@ In this type of inheritance, multiple derived classes inherits from a single bas
 
 In this type of inheritance the derived class inherits from a class, which in turn inherits from some other class. The Super class for one, is sub class for the other.
 
-![https://www.studytonight.com/cpp/images/multilevel-inheritance.jpg](https://www.studytonight.com/cpp/images/multilevel-inheritance.jpg)
+![width:500](https://www.studytonight.com/cpp/images/multilevel-inheritance.jpg)
 
 ---
 
@@ -762,7 +763,7 @@ In this type of inheritance the derived class inherits from a class, which in tu
 
 Hybrid Inheritance is combination of Hierarchical and Mutilevel Inheritance.
 
-![https://www.studytonight.com/cpp/images/hybrid-inheritance.jpg](https://www.studytonight.com/cpp/images/hybrid-inheritance.jpg)
+![width:500](https://www.studytonight.com/cpp/images/hybrid-inheritance.jpg)
 
 ---
 
@@ -910,7 +911,6 @@ In this case, first class B constructor will be executed, then class C construct
 They are inherited into the derived class.
 If you redefine a static member function in derived class, all the other overloaded functions in base class are hidden.
 Static Member functions can never be virtual.
-
 
 ---
 
@@ -1074,7 +1074,7 @@ their values
         t1.setTime();
         cout << "\n Enter the second time ";
         t2.setTime();
-        t3 = t1 + t2;	//adding of two time object using '+' operator
+        t3 = t1 + t2;//adding of two time object using '+' operator
         cout << "\n First time ";
         t1.show();
         cout << "\n Second time ";
@@ -1140,15 +1140,13 @@ In case of Copy constructor, we provide the object to be copied as an argument t
             cout<<x<<" "<<y<<endl;
         }
     };
-
 ```
 
 ---
 
 ```cpp
     /* main function */
-    int main()
-    {
+    int main(){
         Samplecopyconstructor obj1(10, 15);     // Normal constructor
         Samplecopyconstructor obj2 = obj1;      // Copy constructor
         cout<<"Normal constructor : ";
@@ -1196,8 +1194,7 @@ In case of Copy constructor, we provide the object to be copied as an argument t
 
 ```cpp
     /* main function */
-    int main()
-    {
+    int main(){
         CopyConstructor c1("Copy");
         CopyConstructor c2 = c1; //Copy constructor
         c1.display();
